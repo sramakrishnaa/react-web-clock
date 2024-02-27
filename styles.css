@@ -1,0 +1,193 @@
+/* Import Google font - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.body {
+    background-color: #bbb;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+/* Anolog Styles */
+.insideclockdiv {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0 !important;
+}
+
+.clock {
+    display: flex;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 2px black;
+    z-index: -8;
+}
+
+.num {
+    position: absolute;
+    inset: 5px;
+    text-align: center;
+    transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+
+.num span {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    transform: rotate(calc(var(--i) * (-360deg / 12)));
+}
+
+.pipe {
+    position: absolute;
+    inset: 13px;
+    text-align: center;
+    transform: rotate(calc(var(--i) * (360deg / 60)));
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+.indicator {
+    position: absolute;
+}
+
+
+.dot {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.indicator .hand {
+    position: absolute;
+    height: 190px;
+    width: 2px;
+    bottom: 0;
+    border-radius: 100% 100% 0 0;
+    transform-origin: bottom;
+    background: red;
+}
+
+.hand.minute {
+    height: 170px;
+    width: 4px;
+    background: black;
+}
+
+.hand.hour {
+    height: 130px;
+    width: 6px;
+    background: black;
+}
+
+.datediv {
+    position: relative;
+    top: 80px;
+    z-index: -1;
+}
+
+.daydiv {
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+}
+
+.toggle-label {
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid black;
+}
+
+
+.btn-check:checked+.toggle-label {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+/* Digital Styles */
+.daydate {
+    border-radius: 5px 5px 0 0;
+    background-color: #eaeaea;
+
+}
+
+.digi-hours {
+    font-size: 80px;
+}
+
+.time {
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0px 0px 1px black;
+    background-color: whitesmoke;
+}
+
+.card {
+    background-color: none;
+    box-shadow: 0 0 2px black;
+    border: 0;
+}
+
+.digital-toggle-label input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.digital-toggle-label label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: #fff;
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 0 2px black;
+}
+
+.digital-toggle-label label:after {
+    content: '';
+    position: absolute;
+    top: 1.7px;
+    left: 2px;
+    width: 21.5px;
+    height: 21.5px;
+    background: black;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.digital-toggle-label input:checked+label {
+    background: #fff;
+}
+
+.digital-toggle-label input:checked+label:after {
+    background-color: black;
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.digital-toggle-label label:active:after {
+    width: 30px;
+}

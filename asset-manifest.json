@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/react-web-clock/static/js/main.b613cd04.js",
+    "index.html": "/react-web-clock/index.html",
+    "main.b613cd04.js.map": "/react-web-clock/static/js/main.b613cd04.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b613cd04.js"
+  ]
+}
